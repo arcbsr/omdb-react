@@ -1,0 +1,166 @@
+/* Basic reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.header {
+  position: fixed; /* Fix the header at the top */
+  top: 0;
+  left: 0;
+  width: 100%; /* Ensure the header spans the full width */
+  z-index: 1000; /* Ensure the header is above other elements */
+  background-color: #333;
+  color: white;
+  padding: 10px 20px;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%; /* Make container take full width */
+}
+
+.logo {
+  font-size: 24px;
+}
+
+.menu-icon {
+  display: none; /* Hide by default */
+  font-size: 24px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.menu-icon:hover {
+  color: #ddd;
+}
+
+.nav-drawer {
+  position: fixed;
+  top: 0;
+  left: -250px; /* Hide the drawer offscreen */
+  width: 250px;
+  height: 100%;
+  background-color: #444;
+  color: white;
+  transition: left 0.3s;
+  padding-top: 60px;
+}
+
+.nav-drawer.open {
+  left: 0; /* Slide the drawer into view */
+}
+
+.nav-horizontal {
+  display: flex;
+  align-items: center;
+}
+
+.nav-horizontal .nav-links {
+  display: flex;
+  list-style-type: none;
+  padding: 0;
+}
+
+.nav-horizontal .nav-links li {
+  padding: 0 15px;
+}
+
+.nav-horizontal .nav-links a {
+  color: white;
+  text-decoration: none;
+  display: block;
+}
+
+.nav-horizontal .nav-links a:hover {
+  /* background-color: #555; */
+
+  font-size: 1.1em;
+  transition: font-size 0.3s;
+
+}
+
+.nav-drawer .nav-links {
+  list-style-type: none;
+  padding: 0;
+}
+
+.nav-drawer .nav-links li {
+  padding: 15px 20px;
+}
+
+.nav-drawer .nav-links a {
+  color: white;
+  text-decoration: none;
+  display: block;
+}
+
+.nav-drawer .nav-links a:hover {
+  /* background-color: #555; */
+  font-size: 1.1em;
+  transition: font-size 0.3s;
+}
+.logins-btn {
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 20px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+  background: rgb(3, 97, 19);
+}
+
+.logins-btn:hover {
+  background: white;
+  color: rgb(3, 97, 19);
+}
+.logout-btn {
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: bold;
+  background: rgb(255, 0, 0);
+}
+
+.logout-btn:hover {
+  background: white;
+  color: rgb(255, 0, 0);
+}
+/* Responsive design */
+@media (max-width: 768px) {
+  .menu-icon {
+    display: block; /* Show menu icon on small screens */
+  }
+
+  .nav-horizontal {
+    display: none; /* Hide horizontal nav on small screens */
+  }
+
+  .nav-drawer.open {
+    left: 0; /* Ensure drawer is visible when open */
+  }
+
+  .nav-drawer .nav-links {
+    display: block;
+  }
+}
+
+@media (min-width: 769px) {
+  .nav-drawer {
+    display: none; /* Hide drawer on large screens */
+  }
+
+  .menu-icon {
+    display: none; /* Hide menu icon on large screens */
+  }
+}

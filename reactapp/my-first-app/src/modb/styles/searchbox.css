@@ -1,0 +1,42 @@
+/* Fixed size for the search bar */
+.search-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto;
+    width: 400px; /* Fixed width */
+  }
+  
+  .search-input {
+    width: 70%; /* Occupy 70% of the parent */
+
+    padding: 10px 15px; /* Add padding inside the input */
+  border: 2px solid #ccc; /* Light grey border */
+  border-radius: 25px; /* Rounded corners */
+  font-size: 16px; /* Adjust font size */
+  transition: border-color 0.3s, box-shadow 0.3s;
+  }
+  
+/* Button styling */
+.search-button {
+  background-color: #007bff; /* Blue background */
+  color: white; /* White text */
+  padding: 10px 20px; /* Add padding */
+  border: none; /* Remove default border */
+  border-radius: 25px; /* Rounded corners */
+  font-size: 16px; /* Adjust font size */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+/* Button hover effect */
+.search-button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+  transform: scale(1.05); /* Slight scale up on hover */
+}
+
+/* Button focus effect */
+.search-button:focus {
+  outline: none; /* Remove default outline */
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Glowing effect on focus */
+}
